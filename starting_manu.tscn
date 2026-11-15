@@ -1,0 +1,94 @@
+[gd_scene format=3 uid="uid://c31qrcodtwy2r"]
+
+[ext_resource type="Script" uid="uid://bqg24oob1ty0s" path="res://starting_manu.gd" id="1_u5wod"]
+[ext_resource type="Texture2D" uid="uid://l07tmw5qghk0" path="res://for use/caveRemasteredV7.png" id="2_uirj7"]
+[ext_resource type="FontFile" uid="uid://dqa1cqk4864ne" path="res://for use/SmallPixaly.ttf" id="3_p2wbt"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_wp5od"]
+texture = ExtResource("2_uirj7")
+modulate_color = Color(0.5370987, 0.5370987, 0.5370987, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dagrs"]
+bg_color = Color(0.79097146, 0.68468535, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_e8876"]
+bg_color = Color(0.24018988, 0.20785135, 0.07041275, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4xiwg"]
+bg_color = Color(0.1588119, 0.12898634, 0.36013436, 1)
+
+[node name="starting manu" type="Control" unique_id=179498111]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_u5wod")
+
+[node name="Panel" type="Panel" parent="." unique_id=1273474548]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_wp5od")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1910251253]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -212.0
+offset_top = -90.5
+offset_right = 212.0
+offset_bottom = 90.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Button" type="Button" parent="VBoxContainer" unique_id=270538548]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0.0093103545, 0.0093103545, 0.0093103545, 1)
+theme_override_fonts/font = ExtResource("3_p2wbt")
+theme_override_font_sizes/font_size = 68
+theme_override_styles/normal = SubResource("StyleBoxFlat_dagrs")
+theme_override_styles/hover = SubResource("StyleBoxFlat_e8876")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_4xiwg")
+text = "Start game "
+
+[node name="Button2" type="Button" parent="VBoxContainer" unique_id=86855471]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0.0093103545, 0.0093103545, 0.0093103545, 1)
+theme_override_fonts/font = ExtResource("3_p2wbt")
+theme_override_font_sizes/font_size = 70
+theme_override_styles/normal = SubResource("StyleBoxFlat_dagrs")
+theme_override_styles/hover = SubResource("StyleBoxFlat_e8876")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_4xiwg")
+text = "Exit"
+
+[node name="Label" type="Label" parent="." unique_id=408819604]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -203.0
+offset_top = -213.0
+offset_right = 203.0
+offset_bottom = -85.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("3_p2wbt")
+theme_override_font_sizes/font_size = 135
+text = "dr doom"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="VBoxContainer/Button" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="VBoxContainer/Button2" to="." method="_on_exit_pressed"]

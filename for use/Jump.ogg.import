@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://beavccfhvetwb"
+path="res://.godot/imported/Jump.ogg-0b7a6ac6d46b0ec79194ad1e68321feb.oggvorbisstr"
+
+[deps]
+
+source_file="res://for use/Jump.ogg"
+dest_files=["res://.godot/imported/Jump.ogg-0b7a6ac6d46b0ec79194ad1e68321feb.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

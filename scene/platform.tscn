@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://cce6yym3s5666"]
+
+[ext_resource type="Texture2D" uid="uid://dwpkifha46yud" path="res://for use/pixellab-h-1794652408875 (1).png" id="1_s0ih4"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wp5od"]
+size = Vector2(14, 8)
+
+[node name="platform" type="AnimatableBody2D" unique_id=2000599558]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1489928480]
+region_enabled = true
+
+[node name="PixellabH1794652408875(1)" type="Sprite2D" parent="." unique_id=1373817231]
+position = Vector2(0, -4)
+texture = ExtResource("1_s0ih4")
+region_enabled = true
+region_rect = Rect2(96.8387, 80.83411, 14.29007, 9.269287)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1355904034]
+position = Vector2(0, -4)
+shape = SubResource("RectangleShape2D_wp5od")
